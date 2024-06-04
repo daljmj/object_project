@@ -21,9 +21,8 @@ public class FontSizeQuizPage extends JPanel {
 
         // 퀴즈 질문 생성
         questions = new ArrayList<>();
-        questions.add(new QuizQuestion("CameraQuiz1.png", new String[]{"tkd단의 큰 하얀색 동그라미를 눌러요.", "우측 하단의 쌍방향 버튼을 눌러요.", "인식된 큐알코드를 눌러요.", "카메라 화면에 뜬 영어가 적힌 링크를 눌러요."}, 3, "큐알코드는 코드 인식 시 특정 페이지로 이동하는 기능을 가지고 있어요. \n이 큐알코드에 카메라를 가져다 대면 해당 페이지로 이동하는 링크가 떠요. 이 링크를 누르면 이동할 수 있답니다."));
-        questions.add(new QuizQuestion("CameraQuiz2.png", new String[]{"하단의 큰 하얀색 동그라미를 눌러요.", "우측 하단의 쌍방향 버튼을 눌러요.", "좌측 하단의 동그라미를 눌러요.", "동영상 버튼을 눌러요."}, 0, "하단 중앙의 큰 하얀색 동그라미 버튼이 사진을 찍는 버튼이에요.\n우측 하단의 쌍방향 버튼을 누르면 셀카( 내 얼굴)를 찍는 기능으로 바뀌어요. \n좌측 하단의 동그라미를 누르면 이전에 찍은 사진을 볼 수 있어요."));
-        questions.add(new QuizQuestion("CameraQuiz3.png", new String[]{"하단의 큰 하얀색 동그라미를 눌러요.", "우측 하단의 쌍방향 버튼을 눌러요.", "하단의 사진 옆 ‘동영상’ 버튼을 눌러요..", "좌측 하단의 이전 사진 동그라미를 눌러요."}, 2, "하단의 사진 옆 동영상 버튼을 클릭하면 동영상 기능으로 바뀌어요.  \n그 뒤 사진 기능과 동일하게 중앙 하단의 동그라미 버튼을 누르면 녹화가 진행된답니다."));
+        questions.add(new QuizQuestion("FontSizeQuiz1.png", new String[]{"1번", "2번", "3번", "4번"}, 2, "톱니바퀴 모양 버튼을 누르면 설정으로 들어갈 수 있어요."));
+        questions.add(new QuizQuestion("FontSizeQuiz2.png", new String[]{"이름 부분을 눌러요.", "기기 간 연결을 선택해요.", "돋보기 버튼을 눌러요.", "돋보기 버튼을 눌러 ‘글꼴'을 검색해요."}, 3, "돋보기는 검색 탭으로 돋보기 모양을 누른 후 ‘글꼴'을 검색하면 글꼴과 관련된 설정을 쉽게 찾을 수 있어요."));
         
         // 질문 라벨 설정
         questionLabel = new JLabel();
