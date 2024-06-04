@@ -64,7 +64,7 @@ public class EmergeTelPage extends JPanel {
         setImageIcon(currentIndex);
 
         // 버튼 패널을 하단에 추가
-        JPanel southPanel = new JPanel(new BorderLayout());
+        JPanel southPanel = new JPanel(new GridLayout(1, 3));
 
         // 이전 이미지로 이동하는 버튼 생성 (하단 좌측에 위치)////////////////////////////////
         prevImageButton = new JButton("◀ 이전 방법으로 이동하기");

@@ -18,7 +18,7 @@ public class MainApp extends JFrame {
 
         mainPanel.add(new MainPage(this), "MainPage");
         mainPanel.add(new LearningMaterialsPage(this), "LearningMaterialsPage");
-        mainPanel.add(new LearningPage(this), "LearningPage");
+        mainPanel.add(new QuizSolvingPage(this), "QuizSolvingPage");
         mainPanel.add(new ProgressPage(this), "ProgressPage");
 
         customizeButtons();
@@ -42,8 +42,8 @@ public class MainApp extends JFrame {
         cardLayout.show(mainPanel, "LearningMaterialsPage");
     }
 
-    public void showLearningPage() {
-        cardLayout.show(mainPanel, "LearningPage");
+    public void showQuizSolvingPage() {
+        cardLayout.show(mainPanel, "QuizSolvingPage");
     }
 
     public void showProgressPage() {

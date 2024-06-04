@@ -9,6 +9,13 @@
             "name": "MainApp",
             "request": "launch",
             "mainClass": "MainApp",
+            "projectName": "object_project_8f2fc3d0"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "MainApp",
             "projectName": "밤양객체_106d61ed"
         },
         {

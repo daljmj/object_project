@@ -1,8 +1,8 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class MainPage extends JPanel {
     private MainApp mainApp;
@@ -48,10 +48,10 @@ public class MainPage extends JPanel {
         learningMaterialsButton.setBackground(Color.decode("#CBDBFF")); // 배경색을 파란색으로 설정
         learningMaterialsButton.setFont(new Font("함초롬돋움", Font.PLAIN, 80)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
 
-        JButton todayLearningButton = new JButton("<html><center>오늘의 학습<br><br><font size='10'>오늘의 학습 자료를 보고 퀴즈를 풀 수 있습니다.</font></center></html>");
-        todayLearningButton.setPreferredSize(new Dimension(400, 400)); // 너비 200픽셀, 높이 50픽셀로 설정
-        todayLearningButton.setBackground(Color.decode("#FFDBEA"));
-        todayLearningButton.setFont(new Font("함초롬돋움", Font.PLAIN, 80)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
+        JButton todayQuizButton = new JButton("<html><center>오늘의 퀴즈<br><br><font size='10'>랜덤으로 제공되는 퀴즈를 풀 수 있습니다.</font></center></html>");
+        todayQuizButton.setPreferredSize(new Dimension(400, 400)); // 너비 200픽셀, 높이 50픽셀로 설정
+        todayQuizButton.setBackground(Color.decode("#FFDBEA"));
+        todayQuizButton.setFont(new Font("함초롬돋움", Font.PLAIN, 80)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
 
         JButton progressButton = new JButton("<html><center>전체 진도 현황<br><br><font size='10'>나의 전체 진도 현황을 확인할 수 있습니다.</font></center></html>");
         progressButton.setPreferredSize(new Dimension(400, 400)); // 너비 200픽셀, 높이 50픽셀로 설정
@@ -60,12 +60,12 @@ public class MainPage extends JPanel {
 
 
         learningMaterialsButton.addActionListener(e -> mainApp.showLearningMaterialsPage());
-        todayLearningButton.addActionListener(e -> mainApp.showLearningPage());
+        todayQuizButton.addActionListener(e -> mainApp.showQuizSolvingPage());
         progressButton.addActionListener(e -> mainApp.showProgressPage());
 
         // 버튼을 패널에 추가
         buttonPanel.add(learningMaterialsButton);
-        buttonPanel.add(todayLearningButton);
+        buttonPanel.add(todayQuizButton);
         buttonPanel.add(progressButton);
 
         // 패널을 MainPage에 추가
