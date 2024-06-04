@@ -1,7 +1,8 @@
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
+
 
 
 public class LearningMaterialsPage extends JPanel {
@@ -43,7 +44,23 @@ public class LearningMaterialsPage extends JPanel {
             materialButton.setToolTipText(material.getDescription());
             materialButton.setFont(new Font("함초롬돋움", Font.PLAIN, 30)); // 텍스트 크기 설정
             materialButton.addActionListener(e -> {
-                mainApp.showCameraPage();
+                switch (material.getTitle()) {
+                    case "DAY1. 카메라 이용하기":
+                        mainApp.showCameraPage();
+                        break;
+                    case "DAY2. 문자 보내기":
+                        mainApp.showMessagePage();
+                        break;
+                    case "DAY3. 앱 설치하기":
+                        mainApp.showAppInstallPage();
+                        break;
+                    case "DAY4. 글자 크기 키우기":
+                        mainApp.showFontSizePage();
+                        break;
+                    case "DAY5. 비상 연락망 저장하기":
+                        mainApp.showEmergeTelPage();
+                        break;
+                }
             });
             materialsPanel.add(materialButton);
         }

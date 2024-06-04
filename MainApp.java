@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class MainApp extends JFrame {
     private CardLayout cardLayout = new CardLayout();
@@ -18,8 +18,7 @@ public class MainApp extends JFrame {
 
         mainPanel.add(new MainPage(this), "MainPage");
         mainPanel.add(new LearningMaterialsPage(this), "LearningMaterialsPage");
-        mainPanel.add(new LearningPage(this), "LearningPage");
-        mainPanel.add(new QuizPage(this), "QuizPage");
+        mainPanel.add(new QuizSolvingPage(this), "QuizSolvingPage");
         mainPanel.add(new ProgressPage(this), "ProgressPage");
 
         customizeButtons();
@@ -43,12 +42,12 @@ public class MainApp extends JFrame {
         cardLayout.show(mainPanel, "LearningMaterialsPage");
     }
 
-    public void showLearningPage() {
-        cardLayout.show(mainPanel, "LearningPage");
-    }
-
     public void showQuizPage() {
         cardLayout.show(mainPanel, "QuizPage");
+    }
+
+    public void showQuizSolvingPage() {
+        cardLayout.show(mainPanel, "QuizSolvingPage");
     }
 
     public void showProgressPage() {
@@ -84,6 +83,33 @@ public class MainApp extends JFrame {
         mainPanel.add(emergeTelPage, "EmergeTelPage"); 
         cardLayout.show(mainPanel, "EmergeTelPage"); 
     }
+
+    //퀴즈 페이지들
+    public void showCameraQuizPage() {
+        cardLayout.show(mainPanel, "CameraQuizPage");
+        mainPanel.add(new CameraQuizPage(this), "CameraQuizPage");
+    }
+
+    public void showFontSizeQuizPage() {
+        cardLayout.show(mainPanel, "FontSizeQuizPage");
+        mainPanel.add(new FontSizeQuizPage(this), "FontSizeQuizPage");
+    }
+
+    public void showEmergeTelQuizPage() {
+        cardLayout.show(mainPanel, "EmergeTelQuizPage");
+        mainPanel.add(new EmergeTelQuizPage(this), "EmergeTelQuizPage");
+    }
+
+    public void showMessageQuizPage() {
+        cardLayout.show(mainPanel, "MessageQuizPage");
+        mainPanel.add(new MessageQuizPage(this), "MessageQuizPage");
+    }
+
+    public void showAppInstallQuizPage() {
+        cardLayout.show(mainPanel, "AppInstallQuizPage");
+        mainPanel.add(new AppInstallQuizPage(this), "AppInstallQuizPage");
+    }
+
 
 
     public static void main(String[] args) {
