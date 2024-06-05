@@ -7,6 +7,7 @@ public class FontSizePage extends JPanel {
     private int currentIndex = 0; // 현재 보여지는 이미지의 인덱스
     private JLabel imageLabel; // 이미지를 표시할 JLabel
     private JButton backButton; // 뒤로 가기 버튼
+    private JButton prevButton; // 이전으로 버튼
     private JButton prevImageButton; // 이전 이미지 버튼 
     private JButton nextImageButton; // 다음 이미지 버튼 
     private JButton quizButton; // 퀴즈 페이지로 이동하는 버튼
@@ -20,7 +21,7 @@ public class FontSizePage extends JPanel {
         setLayout(new BorderLayout());
 
         //위에 큰 제목
-        JLabel titleLabel = new JLabel("    글자 크기 키우는 방법", JLabel.CENTER);
+        JLabel titleLabel = new JLabel("글자 크기 키우는 방법", JLabel.CENTER);
         titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 100));
         titleLabel.setBackground(Color.decode("#CBDBFF")); // 배경색 설정
         titleLabel.setOpaque(true); // 배경이 투명하지 않게 설정
@@ -34,6 +35,13 @@ public class FontSizePage extends JPanel {
         northPanel.add(backButton, BorderLayout.EAST);
         northPanel.add(titleLabel, BorderLayout.CENTER);
         add(northPanel, BorderLayout.NORTH);
+    
+    	// 같은 패널에 이전 버튼 추가
+        prevButton = new JButton("<html><center><font size='7'>이전으로<br>돌아가기</font></center></html>");
+        prevButton.addActionListener(e -> mainApp.showLearningMaterialsPage());
+        prevButton.setBackground(Color.decode("#FFDBEA")); // 배경색 설정
+        prevButton.setForeground(Color.BLACK); // 글자색 설정
+        northPanel.add(prevButton, BorderLayout.WEST);
 
         // 이미지 아이콘 배열 초기화
         imageIcons = new ImageIcon[4]; // 이미지의 개수
