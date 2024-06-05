@@ -37,9 +37,11 @@ public class CameraQuizPage extends JPanel {
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(20, 0, 20, 0); // 위 아래로 20픽셀의 여백을 추가
+        Font buttonFont = new Font("Arial", Font.PLAIN, 18); // 폰트 설정
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i] = new JRadioButton();
             optionButtons[i].setHorizontalAlignment(JRadioButton.CENTER);
+            optionButtons[i].setFont(buttonFont); // 폰트 적용
             group.add(optionButtons[i]);
             optionsPanel.add(optionButtons[i], gbc);
         }
