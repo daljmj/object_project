@@ -48,15 +48,19 @@ public class AppInstallQuizPage extends JPanel {
 
         // 버튼 설정
         JButton nextButton = new JButton("다음 문제");
+        nextButton.setForeground(Color.BLACK); // 글자 색상 설정
         nextButton.addActionListener(e -> showNextQuestion());
 
         JButton previousButton = new JButton("이전 문제");
+        previousButton.setForeground(Color.BLACK); // 글자 색상 설정
         previousButton.addActionListener(e -> showPreviousQuestion());
 
         JButton submitButton = new JButton("정답 확인");
+        submitButton.setForeground(Color.BLACK); // 글자 색상 설정
         submitButton.addActionListener(e -> checkAnswer());
 
         JButton backButton = new JButton("메인 화면으로 돌아가기");
+        backButton.setForeground(Color.BLACK); // 글자 색상 설정
         backButton.addActionListener(e -> {
             resetQuiz();
             mainApp.showMainPage();
