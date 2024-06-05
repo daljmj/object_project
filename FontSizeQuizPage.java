@@ -29,26 +29,37 @@ public class FontSizeQuizPage extends JPanel {
         questionLabel.setHorizontalAlignment(JLabel.CENTER);
 
         // 옵션 패널 설정
-        JPanel optionsPanel = new JPanel(new GridLayout(4, 1, 10, 10));
+        JPanel optionsPanel = new JPanel(new GridBagLayout());
         group = new ButtonGroup();
         optionButtons = new JRadioButton[4];
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets = new Insets(20, 0, 20, 0); // 위 아래로 20픽셀의 여백을 추가
+        Font buttonFont = new Font("Arial", Font.PLAIN, 18); // 폰트 설정
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i] = new JRadioButton();
+            optionButtons[i].setHorizontalAlignment(JRadioButton.CENTER);
+            optionButtons[i].setFont(buttonFont); // 폰트 적용
             group.add(optionButtons[i]);
-            optionsPanel.add(optionButtons[i]);
+            optionsPanel.add(optionButtons[i], gbc);
         }
 
         // 버튼 설정
         JButton nextButton = new JButton("다음 문제");
+        nextButton.setForeground(Color.BLACK); // 글자 색상 설정
         nextButton.addActionListener(e -> showNextQuestion());
 
         JButton previousButton = new JButton("이전 문제");
+        previousButton.setForeground(Color.BLACK); // 글자 색상 설정
         previousButton.addActionListener(e -> showPreviousQuestion());
 
         JButton submitButton = new JButton("정답 확인");
+        submitButton.setForeground(Color.BLACK); // 글자 색상 설정
         submitButton.addActionListener(e -> checkAnswer());
 
         JButton backButton = new JButton("메인 화면으로 돌아가기");
+        backButton.setForeground(Color.BLACK); // 글자 색상 설정
         backButton.addActionListener(e -> {
             resetQuiz();
             mainApp.showMainPage();
