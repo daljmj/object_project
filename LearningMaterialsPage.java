@@ -28,11 +28,12 @@ public class LearningMaterialsPage extends JPanel {
         // learningMaterials 리스트에는 LearningContent 객체가 포함
         // LearningContent 객체는 학습자료의 제목과 설명
         learningMaterials = new ArrayList<>();
-        learningMaterials.add(new LearningContent("DAY1. 카메라 이용하기", "스마트폰 카메라를 사용하는 방법에 대한 상세 가이드."));
-        learningMaterials.add(new LearningContent("DAY2. 문자 보내기", "문자 메시지를 보내는 방법에 대한 상세 가이드."));
-        learningMaterials.add(new LearningContent("DAY3. 앱 설치하기", "스마트폰에서 앱을 설치하는 방법에 대한 상세 가이드."));
-        learningMaterials.add(new LearningContent("DAY4. 글자 크기 키우기", "스마트폰의 글자를 키우는 방법에 대한 상세 가이드."));
-        learningMaterials.add(new LearningContent("DAY5. 비상 연락망 저장하기", "스마트폰에서 비상 연락망을 저장하는 방법에 대한 상세 가이드."));
+        learningMaterials.add(new LearningContent("1. 카메라 이용하기", "스마트폰 카메라를 사용하는 방법에 대한 상세 가이드."));
+        learningMaterials.add(new LearningContent("2. 문자 보내기", "문자 메시지를 보내는 방법에 대한 상세 가이드."));
+        learningMaterials.add(new LearningContent("3. 앱 설치하기", "스마트폰에서 앱을 설치하는 방법에 대한 상세 가이드."));
+        learningMaterials.add(new LearningContent("4. 글자 크기 키우기", "스마트폰의 글자를 키우는 방법에 대한 상세 가이드."));
+        learningMaterials.add(new LearningContent("5. 비상 연락망 저장하기", "스마트폰에서 비상 연락망을 저장하는 방법에 대한 상세 가이드."));
+        // learningMaterials.add(new LearningContent("6. 문자로 사진 보내기", "문자 메시지에서 사진을 보내는 방법에 대한 상세 가이드."));
 
         setBackground(Color.decode("#CBDBFF"));
 
@@ -45,19 +46,19 @@ public class LearningMaterialsPage extends JPanel {
             materialButton.setFont(new Font("함초롬돋움", Font.PLAIN, 30)); // 텍스트 크기 설정
             materialButton.addActionListener(e -> {
                 switch (material.getTitle()) {
-                    case "DAY1. 카메라 이용하기":
+                    case "1. 카메라 이용하기":
                         mainApp.showCameraPage();
                         break;
-                    case "DAY2. 문자 보내기":
+                    case "2. 문자 보내기":
                         mainApp.showMessagePage();
                         break;
-                    case "DAY3. 앱 설치하기":
+                    case "3. 앱 설치하기":
                         mainApp.showAppInstallPage();
                         break;
-                    case "DAY4. 글자 크기 키우기":
+                    case "4. 글자 크기 키우기":
                         mainApp.showFontSizePage();
                         break;
-                    case "DAY5. 비상 연락망 저장하기":
+                    case "5. 비상 연락망 저장하기":
                         mainApp.showEmergeTelPage();
                         break;
                 }
