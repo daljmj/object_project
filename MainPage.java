@@ -42,19 +42,18 @@ public class MainPage extends JPanel {
         // 버튼을 담을 패널 생성
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
-        JButton learningMaterialsButton = new JButton("<html><center><bold>공부방</bold><br><br><font size='10'>뚝딱폰의 전체 자료를 제공합니다.</font></center></html>");
-        learningMaterialsButton.setPreferredSize(new Dimension(200, 50)); // 너비 200픽셀, 높이 50픽셀로 설정
-        learningMaterialsButton.setPreferredSize(new Dimension(550, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
+        JButton learningMaterialsButton = new JButton("<html><center><bold>공부방</bold><br><br><font size='10'>똑딱폰의 전체 자료를 제공합니다.</font></center></html>");
+        learningMaterialsButton.setPreferredSize(new Dimension(450, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
         learningMaterialsButton.setBackground(Color.decode("#CBDBFF")); // 배경색을 파란색으로 설정
         learningMaterialsButton.setFont(new Font("함초롬돋움", Font.PLAIN, 80)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
 
         JButton todayQuizButton = new JButton("<html><center>오늘의 퀴즈<br><br><font size='10'>랜덤으로 제공되는 퀴즈를 풀 수 있습니다.</font></center></html>");
-        todayQuizButton.setPreferredSize(new Dimension(550, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
+        todayQuizButton.setPreferredSize(new Dimension(450, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
         todayQuizButton.setBackground(Color.decode("#FFDBEA"));
         todayQuizButton.setFont(new Font("함초롬돋움", Font.PLAIN, 80)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
 
         JButton progressButton = new JButton("<html><center>진도현황 체크<br><br><font size='10'>나의 진도 현황을 체크할 수 있습니다.</font></center></html>");
-        progressButton.setPreferredSize(new Dimension(550, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
+        progressButton.setPreferredSize(new Dimension(450, 550)); // 너비 200픽셀, 높이 50픽셀로 설정
         progressButton.setBackground(Color.decode("#FFF6BA")); // 배경색을 파란색으로 설정
         progressButton.setFont(new Font("함초롬돋움", Font.PLAIN, 75)); // 글꼴은 '맑은 고딕', 크기는 20픽셀로 설정
 
