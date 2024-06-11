@@ -28,7 +28,7 @@ public class ProgressPage extends JPanel {
         // 퀴즈 질문 생성
         questions = new ArrayList<>();
         questions.add(new TodayQuestion("오늘은 6월 12일, 공부 첫날! 공부하셨나요?", new String[]{"네! 퀴즈까지 다 했어요", "아니요, 내일은 할거에요!"}, 0, "June.png"));
-        questions.add(new TodayQuestion("오늘은 2일차, 6월 13일! 공부하셨나요?", new String[]{"네, 뿌듯해요^^", "아니요, 또 미뤘어요."}, 2, "June2.png"));
+        questions.add(new TodayQuestion("오늘은 2일차, 6월 13일! 공부하셨나요?", new String[]{"네, 뿌듯해요^^", "아니요, 또 미뤘어요."}, 2, "Junetwo.png"));
 
         // 패널 설정
         JPanel centerPanel = new JPanel(new BorderLayout());
